@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="main.js" defer></script>
 
     <link
       rel="stylesheet"
@@ -29,15 +30,16 @@
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4">
       <div class="container-xxl">
-        <a href="#intro" class="navbar-brand">
-          <span class="fw-bold text-secondary"
-            ><i class="bi bi-book-half"></i> Net Ninja Pro - the Book
+        <!-- navbar brand / title -->
+        <a class="navbar-brand" href="#intro">
+          <span class="text-secondary fw-bold">
+            <i class="bi bi-book-half"></i>
+            Net Ninja Pro - the Book
           </span>
         </a>
-
-        <!-- toggle for mobile nav -->
+        <!-- toggle button for mobile nav -->
         <button
           class="navbar-toggler"
           type="button"
@@ -79,28 +81,6 @@
     <!-- main image & intro text -->
     <section id="intro">
       <div class="container-lg">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-md-5 text-center text-md-start">
-            <h1>
-              <div class="display-2">Black-Belt</div>
-              <div class="display-5 text-muted">Your Coding Skills</div>
-            </h1>
-            <p class="lead my-4 text-muted">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
-            <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
-          </div>
-
-          <div class="col-md-5 text-center d-none d-md-block">
-            <img src="assets/ebook-cover.png" class="img-fluid" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- pricing plans -->
-    <section id="intro">
-      <div class="container-lg">
         <div class="row g-4 justify-content-center align-items-center">
           <div class="col-md-5 text-center text-md-start">
             <h1>
@@ -114,7 +94,18 @@
             <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
-            <img src="/assets/ebook-cover.png" class="img-fluid" alt="ebook" />
+            <!-- tooltip -->
+            <span
+              class="tt"
+              data-bs-placement="bottom"
+              title="Net Ninja Pro book cover"
+            >
+              <img
+                src="/assets/ebook-cover.png"
+                class="img-fluid"
+                alt="ebook"
+              />
+            </span>
           </div>
         </div>
       </div>
@@ -186,9 +177,8 @@
             </div>
           </div>
         </div>
-
-        <!-- end container -->
       </div>
+      <!-- end container -->
     </section>
 
     <!-- topics at a glance -->
@@ -200,12 +190,10 @@
             A quick glance at the topics you'll learn
           </p>
         </div>
-
         <div class="row my-5 g-5 justify-content-around align-items-center">
           <div class="col-6 col-lg-4">
-            <img src="assets/kindle.png" class="img-fluid" alt="eBook" />
+            <img src="/assets/kindle.png" class="img-fluid" alt="ebook" />
           </div>
-
           <div class="col-lg-6">
             <!-- accordion -->
             <div class="accordion" id="chapters">
@@ -385,8 +373,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- end accordion -->
           </div>
         </div>
       </div>
@@ -443,7 +429,7 @@
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
                 </div>
                 <h5 class="mb-1">A must-buy for every aspiring web dev</h5>
                 <p class="mb-1">
@@ -495,68 +481,84 @@
     </section>
 
     <!-- contact form -->
-    <!-- form-control, label, select / input-group, input-group-text -->
+    <!-- form-control, form-label, form-select, input-group, input-group-text -->
     <section id="contact">
       <div class="container-lg">
         <div class="text-center">
           <h2>Get in Touch</h2>
           <p class="lead">
-            Questions to ask? Fill out the form to contact me direction...
+            Questions to ask? Fill out the form to contact me directly...
           </p>
         </div>
-
         <div class="row justify-content-center my-5">
           <div class="col-lg-6">
             <form>
-              <label for="email" class="form-label">Email Address</label>
-              <div class="mb-4 input-group">
-                <span class="input-group-text"
-                  ><i class="bi bi-envelope-fill"></i
-                ></span>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="e.g. mario@example.com"
-                />
-              </div>
-
-              <label for="name" class="form-label">Name</label>
+              <label for="email" class="form-label">Email address:</label>
               <div class="input-group mb-4">
-                <span class="input-group-text"
-                  ><i class="bi bi-person-fill"></i
-                ></span>
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill text-secondary"></i>
+                </span>
                 <input
                   type="text"
+                  id="email"
                   class="form-control"
+                  placeholder="e.g. mario@example.com"
+                />
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Enter an email address we can reply to."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
+              </div>
+              <label for="name" class="form-label">Name:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person-fill text-secondary"></i>
+                </span>
+                <input
+                  type="text"
                   id="name"
+                  class="form-control"
                   placeholder="e.g. Mario"
                 />
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Pretty self explanatory really..."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
-
               <label for="subject" class="form-label"
                 >What is your question about?</label
               >
-              <div class="input-group mb-4">
-                <span class="input-group-text"
-                  ><i class="bi bi-chat-right-dots-fill"></i
-                ></span>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-chat-right-dots-fill text-secondary"></i>
+                </span>
                 <select class="form-select" id="subject">
                   <option value="pricing" selected>Pricing query</option>
                   <option value="content">Content query</option>
                   <option value="other">Other query</option>
                 </select>
               </div>
-
-              <div class="form-floating mb-4 mt-5">
+              <div class="mb-4 mt-5 form-floating">
                 <textarea
-                  id="query"
                   class="form-control"
+                  id="query"
                   style="height: 140px"
+                  placeholder="query"
                 ></textarea>
                 <label for="query">Your query...</label>
               </div>
-
               <div class="mb-4 text-center">
                 <button type="submit" class="btn btn-secondary">Submit</button>
               </div>
