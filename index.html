@@ -569,5 +569,76 @@
     </section>
 
     <!-- get updates / modal trigger -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="text-center">
+          <h2>Stay in the Loop</h2>
+          <p class="lead">Get the latest updates as they happen...</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <p class="text-muted my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum
+              similique modi quasi nihil deleniti saepe maiores animi quia iure
+              voluptatibus a, ratione eius sapiente exercitationem minima, aut
+              aspernatur? Et!
+            </p>
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#reg-modal"
+            >
+              Register for Updates
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal itself -->
+    <div
+      class="modal fade"
+      id="reg-modal"
+      tabindex="-1"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title">Get the Latest Updates</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
+              exercitationem laboriosam nihil minus voluptatibus harum aliquam
+              consequatur pariatur inventore dignissimos illum excepturi ratione
+              ipsum sit iusto alias eligendi fugit laborum?
+            </p>
+
+            <label for="modal-email" class="form-label"
+              >Your email address:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="modal-email"
+              placeholder="e.g. mario@example.com"
+            />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
