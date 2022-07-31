@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-5-crash-course-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashlog5/Bootstrap-5-Crash-Course-Tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hashlog5/Bootstrap-5-Crash-Course-Tutorial/issues"
+  },
+  "homepage": "https://github.com/hashlog5/Bootstrap-5-Crash-Course-Tutorial#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
